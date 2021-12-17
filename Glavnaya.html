@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Все о котиках</title>
+        <style>
+
+
+.container{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 87vh;
+  position: relative;    
+}
+
+.image{
+  display: none;
+}
+
+/* Next & previous buttons */
+#prev{  
+  position: absolute;
+  top: 43%;
+  left: 0;
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#next{
+  position: absolute;
+  top: 43%;
+  right: 0;
+  cursor: pointer;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#prev:hover, #next:hover {
+  background: rgba(0, 0, 0, 0.5);
+} 
+
+.dots{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.dot{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 70%;
+  /* transition from one do to the next */
+  transition: background-color 0.6s ease;
+}
+
+/* We create this class with JavaScript. It makes the current dot darker gray */
+.active{
+  background-color: #717171;
+} 
+
+/* create fade animation when switching between images */
+.fade{
+/* Animation support for different browsers */
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+} 
+
+
+
+            *{
+                box-sizing: border-box;
+            }
+            html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd, 
+            ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header{
+                             
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            #header{
+                background-color: #ffcc99;
+            }
+            #header h1{
+                font-size: 1.3em;
+                padding: 15px;
+            }
+            #nav{
+				background: linear-gradient(to bottom right, #6b8e23,#ffdead );
+			   
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+            #nav ul{
+                margin-left: 0px;
+                padding-left: 0px;
+                list-style: none;
+            }
+            #nav li { 
+                float: left;
+            }
+            #nav ul a {
+                display: block;
+                width: 9em;
+                padding: 11px;
+                border-left: 1px solid #ccc;
+                text-decoration: none;
+                color: #333;
+                text-align: center;
+            }
+            #nav ul li:last-child a {
+                             
+                border-right: 1px solid #ccc;
+            }
+            #nav ul a:hover{
+                background-color: #808000;
+                color: #663300;
+            }
+            #nav ul:after {
+                content: " ";
+                display: table;
+                clear: both;
+            }
+			#wrapper {
+ background-color: #f5fffa;
+}
+           
+			#content {
+			 margin-left: 50px;
+			  
+			  width: 1170px;
+			  padding: 10px;
+			  background: #fff5ee;
+			}
+			
+			.gradient {	   
+				background: linear-gradient(to top, #cc9900,#ffcc99 );
+				padding: 10px;
+				border: 1px solid #333;
+		   }
+		   .gradient2 {	   
+				background: linear-gradient(to bottom right, #e6e6fa,#fff0f5 );
+				padding: 10px;
+				border: 1px solid #333;
+		   }
+		   	#wrapper {
+ background-color: #f5fffa;
+}
+           
+			
+			
+			#wrap {
+  width: 100%;
+  float: left;
+}
+        </style>
+	
+    </head>
+    <body>
+		<div id="wrapper">
+		
+			<div id="header">
+				<center>
+					<h1 class="gradient">
+						<img  src = "pngwing.com (58).png" width="30px" height="30px" align="left">Все о котиках<img  src = "pngwing.com (58).png" width="30px" height="30px" align="right">
+					</h1> 
+				</center>
+				
+				<div id="nav">
+					<ul>
+						<li><a href="Glavnaya.html">Главная</a></li>
+						<li><a href="Poroda.html">Породы кошек</a></li>
+						
+						<li><a href="Pitanie.html">Питание</a></li>
+						
+						<li><a href="O_Sayte.html">О сайте</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="wrap">
+				
+				<div id="content">
+				<br>
+					<font  face="Tahoma" size="5" color="green"><h1  align="center">Приветствуем Вас на нашем сайте!</h1> </font>
+					<br>
+					 <div class="container">
+				
+					<div class="image fade">
+            <img src="https://koteiki.com/wp-content/uploads/2017/10/cat-1-8-1536x960.jpg" width="100%">
+        </div>
+        <div class="image fade">
+            <img src="https://famt.ru/wp-content/uploads/2019/05/k-chemu-snitsya-govoryaschiy-kot.jpg" width="100%">
+        </div>
+        <div class="image fade">
+            <img src="https://mobimg.b-cdn.net/v3/fetch/94/94e8f3de87352a857b953802e76d9638.jpeg" width="100%">
+        </div>
+        <div class="image fade">
+            <img src="https://mobimg.b-cdn.net/v3/fetch/ef/ef5934ac69158332431f07f169108b07.jpeg" width="100%">
+        </div>
+        <div class="image fade">
+            <img src="https://w-dog.ru/wallpapers/6/1/357873493962558/kot-ryzhij-zevaet-imbir.jpg" width="100%">
+        </div>
+        <div class="image fade">
+            <img src="https://vplate.ru/images/article/orig/2019/04/yaponskie-imena-dlya-koshek-i-kotov-10.jpg" width="100%">
+        </div>
+        <div class="image fade">
+            <img src="https://imagesbase.ru/uploads/posts/2017-06/1497098307_imagesbase.ru.jpg" width="100%">
+        </div>
+     
+
+        <a id="prev" onclick="show_slide(-1)">&#10094;</a>
+        <a id="next" onclick="show_slide(1)">&#10095;</a>
+        
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          
+        </div>
+     </div>
+				</div>
+				
+
+    
+			</div>
+							
+			
+				   
+		</div>
+		 
+		<script src="script.js"></script>
+	</body>
+</html>
